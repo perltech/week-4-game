@@ -18,15 +18,16 @@ $(document).ready(function(){
 	var gem = {
 		rand: function() {
 			var rand = Math.floor(Math.random() * 12) + 1;
-			return rand;
+			var randLink = parseInt(rand);
+			return randLink;
 	},
 
 		//Object to create random number for onclick
 		redGem: function(rand) {
 			//var randGem = Math.floor(Math.random() * 12) + 1;
 			var localGem = gem.rand();
-			var storedGem = $("#redGem").val(localGem);	// How do I capture that random value into a variable?
-			gemPoints += storedGem;
+			//var storedGem = $("#redGem").val(localGem);	// How do I capture that random value into a variable?
+			gemPoints +=  localGem;
 			$("#userPoints").html(gemPoints);
 			// console.log(gemPoints);
 		},
